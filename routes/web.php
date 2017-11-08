@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     
-    $category_list = DB::select('select categoryName, categoryImage from categories');
+    $category_list = DB::table('categories')->get();
     
     // for($i = 1; $i <= 10; $i++){
     //     $obj = new stdClass;
